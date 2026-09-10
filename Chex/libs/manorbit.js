@@ -13,7 +13,7 @@
  *   notorious "every second click snaps" bug.
  * - Zero Autoplay: Retains 100% manual navigation (chevrons, dots, keyboard, swipe).
  * 
- * @author Myxo victor & Gemini Assistant
+ * @author Myxo victor
  */
 (function (global) {
     'use strict';

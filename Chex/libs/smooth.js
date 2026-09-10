@@ -1,4 +1,5 @@
 /**
+ * @author Myxo victor
  * Smooth.js - Seamless, Fluid Continuous Infinite Ticker Slider Engine
  * * Unlike traditional carousels that transition and pause, Smooth.js uses
  * high-performance requestAnimationFrame delta-time rendering to run a 

@@ -7,38 +7,56 @@
  
 const scrollContainerId = 'sponsoredLodgeFlex';
 
- const {div, h1, h2, h3, p, span, label, img, header, footer, section, br,  button, input, nav, a, i, select, option} = Chex;
+ const {div, h1, h2, h3, p, span, label, img, header, footer, section, br,  button, input, nav, a, i, select, option, strong, small} = Chex;
 
 const Landing = () => div([
     header([
        img({class:'logo', src:'./images/logo.svg', alt:'Arix Logo'}),
 
        nav([
-        a({class:'link active', href:'/#/'},[
+        a({class:'link active', href:'#/'},[
             'Home'
         ]),
         a({class:'link', href:'/#/'},[
             'Our Locations'
         ]),
-        a({class:'link', href:'/#/'},[
+        a({class:'link', href:'#/roommate'},[
             'Roommate'
         ]),
-        a({class:'link', href:'/#/'},[
+        a({class:'link', href:'#/agent'},[
             'Become Agent'
         ]),
-        a({class:'link', href:'/#/'},[
+        a({class:'link', href:'#/'},[
             'Contact Us '
         ]),
        ]),
 
        div({class:'cta'},[
         button({class:'bko'},'Login'),
-        div({class:'icon'},[
-            i({class:'fa-solid fa-user'})
-        ])
+        button({class:'bkc'},'Sign Up')
        ])
     ]),
     br(),br(),br(),
+    //Mobile navigation
+    div({class:'mobile-nav'},[
+        ul([
+            li([
+                a({href:'#/', class:'active'},'Home'),
+            ]),
+            li([
+                a({href:'#/', class:''},'Location'),
+            ]),
+            li([
+                a({href:'#/', class:''},'Roommate'),
+            ]),
+            li([
+                a({href:'#/', class:''},'Become agent'),
+            ]),
+            li([
+                a({href:'#/', class:''},'Contact Us'),
+            ]),
+        ])
+    ]),
     
     //Hero section
     div({class:'hero'},[
@@ -997,8 +1015,9 @@ div({ class: "last-section" }, [
     ])
 ]),
 
+
 //footer section
-footer([
+    footer([
     div({class:'footer-flex'},[
         div({class:'flex-card comp'},[
             h3('Arix'),
@@ -1030,7 +1049,7 @@ footer([
         ]),
     ]),
     div({class:'f-div'},[
-    img({class:'footer-logo', src:'./images/from white.png'})
+    img({class:'footer-logo', src:'./images/from white.png', alt:'Aximon Logo'}),
     ]),
     div({class:'f-div2'},[
         p({class:'smtxt'},'© 2026 Arix. All rights reserved.'),
@@ -1040,8 +1059,4 @@ footer([
         ])
     ])
 ])
-
-])
-
-
-Chex.mount(app, Landing)
+])  

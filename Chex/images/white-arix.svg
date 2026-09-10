@@ -1,0 +1,53 @@
+<svg id="arix-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 180" class="w-full max-w-[500px] h-auto drop-shadow-md">
+                <defs>
+                    <!-- Gradient for the roof outline -->
+                    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00bcd4"/>
+                        <stop offset="50%" stop-color="#00a8cc"/>
+                        <stop offset="100%" stop-color="#0052ff"/>
+                    </linearGradient>
+
+                    <!-- Gradient for the map pin -->
+                    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#00d2ad"/>
+                        <stop offset="100%" stop-color="#00a8cc"/>
+                    </linearGradient>
+
+                    <!-- Gradient for the letter X right leg -->
+                    <linearGradient id="xGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0072ff"/>
+                        <stop offset="100%" stop-color="#0044cc"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- 1. ROOF ICON -->
+                <path d="M 25 105 L 145 25 L 265 105" fill="none" stroke="url(#roofGrad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- 2. WINDOW SQUARES (4 small orange squares) -->
+                <g fill="#ffa100">
+                    <rect x="131" y="55" width="11" height="11" rx="2"/>
+                    <rect x="148" y="55" width="11" height="11" rx="2"/>
+                    <rect x="131" y="72" width="11" height="11" rx="2"/>
+                    <rect x="148" y="72" width="11" height="11" rx="2"/>
+                </g>
+
+                <!-- 3. LOCATION PIN WITH ORANGE CENTER -->
+                <path d="M 145 92 C 127 92 113 106 113 124 C 113 147 145 170 145 170 C 145 170 177 147 177 124 C 177 106 163 92 145 92 Z" fill="url(#pinGrad)"/>
+                <circle cx="145" cy="123" r="13" fill="#ffa100"/>
+
+                <!-- 4. TYPOGRAPHY: "Arix" -->
+                <!-- Letter A -->
+                <path d="M 315 125 L 315 72 C 315 54 330 42 349 42 C 368 42 383 54 383 72 L 383 125 M 315 94 L 383 94" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Letter r -->
+                <path d="M 425 125 L 425 80 C 425 68 435 60 447 60 C 454 60 460 62 465 65" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Letter i -->
+                <path d="M 505 125 L 505 82" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                <circle cx="505" cy="51" r="9" fill="#ffa100"/>
+
+                <!-- Letter x -->
+                <path d="M 545 82 L 605 125" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                <path d="M 605 82 L 575 104" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                <path d="M 570 107 L 545 125" fill="none" stroke="url(#xGrad)" stroke-width="16" stroke-linecap="round"/>
+            </svg>
