@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 200 200">
+    <rect x="5" y="5" width="190" height="190" rx="40" fill="#f1f5f9"/>
+    <path d="M50 178Q55 151 78 144L89 140Q100 153 111 140L122 144Q145 151 150 178Z" fill="#1e3a8a"/>
+    <path d="M87 126V148Q100 158 113 148V126Z" fill="#63331c"/>
+    <path d="M64 72Q65 43 100 42Q135 43 136 72L132 111Q126 137 100 143Q74 137 68 111Z" fill="#7c4c35"/>
+    <circle cx="65" cy="99" r="9" fill="#7c4c35"/><circle cx="135" cy="99" r="9" fill="#7c4c35"/>
+    <path d="M62 68C62 35 138 35 138 68C138 50 62 50 62 68Z" fill="#18181b"/>
+    <ellipse cx="82" cy="105" rx="4.5" ry="5.5" fill="#111827"/><ellipse cx="118" cy="105" rx="4.5" ry="5.5" fill="#111827"/>
+    <circle cx="83.5" cy="103.5" r="1.4" fill="#fff"/><circle cx="119.5" cy="103.5" r="1.4" fill="#fff"/>
+    <path d="M72 96Q82 92 92 96M108 96Q118 92 128 96" fill="none" stroke="#18181b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M99 105Q96 116 101 118Q104 119 106 116" fill="none" stroke="#63331c" stroke-width="2" stroke-linecap="round"/>
+    <path d="M84 125Q100 139 116 125" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/><path d="M84 119Q92 113 100 120Q108 113 116 119Q110 128 100 124Q90 128 84 119Z" fill="#18181b"/><path d="M66 96Q80 91 95 97L94 112Q80 116 68 109Z" fill="#111827"/><path d="M105 97Q120 91 134 96L132 109Q120 116 106 112Z" fill="#111827"/><path d="M95 100H105" stroke="#111827" stroke-width="4"/>
+    <circle cx="100" cy="170" r="9" fill="#fff" fill-opacity=".92"/>
+    <text x="100" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="800" fill="#2563eb">A</text>
+  </svg>
