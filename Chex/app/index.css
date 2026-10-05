@@ -1,12 +1,810 @@
-/* Chex 6.0 app/ starter stylesheet */
-
-* {
+/*
+* @author Myxo Victor
+*/
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
+.emulator{
+    width: 400px;
+    height: 100vh;
+    /*border: 1px solid red ;*/
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 10px auto;
+    padding: 1.4em;
+}
+
+.skp{
+    color: gray;
+    text-align: right;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.banner{
+    width: 100%;
+    height: auto
+}
+
+.bti{
+    width: 250px;
+    margin: 20px auto;
+    height: auto;
+}
+
+.btitle{
+    text-align: center;
+}
+
+.bsub{
+    text-align: center;
+    width: 320px;
+    margin: 0 auto;
+    display: block;
+}
+
+.cnt{
+    width: 95%;
+    height: 45px;
+    border: none;
+    background-color: #2563EB;
+    color: white;
+    border-radius: 15px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+
+/*
+-----------------------
+Home Page styling
+------------------------
+*/
+
+.parent{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+}
+
+nav{
+    width: 20%;
+    height: 100vh;
+    background-color: #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+.logo{
+    width: 120px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.navi{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tab{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tab:hover{
+    background-color: #eaeff7;
+}
+
+.active{
+    background-color: #F8FAFC;
+    color: #1E40AF;
+}
+
+.active i{
+    color: #2563EB;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #F8FAFC;
+}
+
+.txt{
+    color: #474b4d;
+    text-align: left;
+    margin-left: 16px;
+    width: 100%;
+    font-weight: 800;
+}
+/*
+.pst{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    background-color: #2563EB;
+    color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+    */
+
+.p-card{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #F8FAFC;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 120px;
+}
+
+.u-name{
+    font-weight: 600;
+}
+
+.sm-txt{
+    color: gray;
+    font-size: 12px;
+}
+
+.u-pro{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+main{
+    width: 80%;
+    height: 100vh;
+    background-color: transparent;
+    overflow-y: auto;
+}
+
+.top{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.page-title{
+    font-size: 1.8rem;
+}
+
+.icon-cta{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 2em;
+}
+
+.search{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.bell{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.page-body{
+    width: 100%;
+    height: auto;
+    padding: 2em;
+}
+
+.pt{
+    font-size: 1.5rem;
+}
+
+.lodges-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.lodge-scroll-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lodge-scroll-button {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #E2E8F0;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: #2563EB;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.lodge-scroll-button:hover {
+    background: #2563EB;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+
+
+/* Lodge Flex Row with Hidden Scrollbars */
+.lodge-flex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  background-color: rgb(248, 246, 246);
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding: 1em;
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-overflow-scrolling: touch;
+}
+
+.lodge-flex::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.lodge-flex {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.spon-card {
+  width: 350px;
+  height: auto;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  flex-shrink: 0; /* Prevents cards from shrinking inside flex row */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.spon-img{
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.posted-by{
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.spon-desc{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+}
+
+.price-spon{
+  font-size: 1.1rem;
+  font-size: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.appr{
+  font-weight: 700;
+}
+
+.prev-pr{
+  text-decoration: line-through;
+  color: rgb(201, 95, 95);
+}
+
+.lodge-location{
+  font-size: 12px;
+  color: gray;
+}
+
+.lodge-cta{
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #2563EB;
+  color: white;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+
+.badge{
+  width: 15px;
+  height: auto;
+}
+
+.spon-tool{
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  top: 10%;
+  background-color: transparent;
+}
+
+.post-ti{
+  font-size: 12px;
+  background-color: white;
+  width: auto;
+  max-width: 120px;
+  height: 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.savei{
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+.mark{
+  width: 15px;
+  height: auto;
+}
+
+.new-flx{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.views{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 12px;
+    color: grey;
+}
+
+
+
+
+.fil-lod{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-flow: wrap;
+}
+
+.fil-card{
+  width: 350px;
+  height: auto;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  flex-shrink: 0; /* Prevents cards from shrinking inside flex row */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+/*
+* Saved Lodges Styling
+*/
+
+.s-lodges{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-flow: wrap;
+}
+
+.saved-card{
+   width: 450px;
+   height: 120px;
+   border-radius: 12px;
+   border: 1px solid rgb(243, 238, 238);
+   margin-top: 20px;
+   padding: 1em;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 20px;
+   cursor: pointer;
+}
+
+.saved-img{
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.desc{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.location{
+    font-size: 12px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stamp{
+    width: 60px;
+    height: 20px;
+    padding: 5px;
+    background-color: gold;
+    color: rgb(152, 138, 57);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.page-divider{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+}
+
+.msg-place{
+    width: 70%;
+    min-width: 0;
+    height: 90vh;
+    overflow-y: auto;
+    background-color: rgb(250, 245, 245);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chats{
+    width: 30%;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.profile-flex{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.profile{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.chat-name{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-weight: 600;
+}
+
+
+.online-prop{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(10, 125, 10);
+}
+
+.activity{
+    font-size: 14px;
+    color: grey;
+}
+
+.p-def{
+    width: 100%;
+    height: 50px;
+    background: #c9d9fb60;
+    color: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.k-txt{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.boka{
+    width: 80px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563EB;
+    font-size: 12px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.f1-msg-preview{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1em;
+}
+
+.msg-preview{
+    width: 350px;
+    height: 100px;
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.preview-img{
+    width: 100px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.preview-msg{
+    width: auto;
+    height: auto;
+}
+
+.pv-title{
+    font-size: 12px;
+    color: #2563EB;
+    font-weight: 600;
+}
+
+.pv-main{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.pv-address{
+    font-size: 10px;
+    color: grey;
+}
+
+.pv-price{
+    color: rgb(74, 154, 74);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.go-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #cadafc57;
+    color: #2563EB;
+}
+
+.sender-msg{
+    max-width: 350px;
+    width: auto;
+    height: auto;
+    background-color: #2563EB;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.receiver-msg-holder{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1em;
+}
+
+.receiver-msg{
+    max-width: 350px;
+    width: auto;
+    height: auto;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1.5px solid #E2E8F0;
+}
+
+.chat-time{
+    font-size: 12px;
+    color: grey;
+}
+
+ .ty-msg{
+    width: 55.9%;
+    box-sizing: border-box;
+    height: 70px;
+    border-top: 1px solid #E2E8F0;
+    bottom: 0;
+    position: fixed;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+}
+
+textarea{
+    width: 95%;
+    height: 50px;
+    padding: 0.99em;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E2E8F0;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+
+    &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.send-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.not-active{
+    background-color: rgb(232, 230, 230);
+    color: gray;
+}
+
+.typing-active{
+    background-color: #2563EB;
+    color: white;
 }
